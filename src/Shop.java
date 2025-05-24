@@ -9,6 +9,8 @@ public class Shop {
 
     public static void main(String[] args) {
 
+        Transport[] transports = new Transport[]{new Motorbike(), new Automobile()};
+
         Map<Product, Integer> basket = new HashMap<>();
         List<Product> dairyDepartment = new ArrayList<>();
         List<Product> bakeryDepartment = new ArrayList<>();
@@ -46,6 +48,9 @@ public class Shop {
         int quantity;
 
         System.out.println("Доставка до двери, ознакомтесь с услугами. ");
+        Arrays.stream(transports).forEach(x -> System.out.println("Доставка: " + x.getName() +
+                x.fuel()));
+
         while (true) {
             System.out.println("Доступные отделы:");
             for (int i = 0; i < departments.length; i++) { // здесь лучше обратиться к размеру отделов а не к цифре.

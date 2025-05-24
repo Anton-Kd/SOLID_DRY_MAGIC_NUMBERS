@@ -24,6 +24,8 @@ public class Departments implements Manufacturer, InfoProduct {
     public String toString() {
         return name;
     }
+    // Создадим метод для вывода списка на экран пользователя.
+    // Повторяющаяся логика, мы просто обратимся  к этому методу.
 
     static void showList(Departments department) {
         System.out.println("Вы выбрали " + "<" + department.getName() + ">" + "\n"
